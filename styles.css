@@ -1,9 +1,9 @@
 :root {
-  --text: #1f2933;
-  --muted: #52606d;
-  --background: #fdfcf9;
-  --accent: #1d5fa8;
-  --border: #d9d4c7;
+  --text: #29231f;
+  --muted: #5b5149;
+  --background: #fbf8f3;
+  --accent: #714a32;
+  --border: #d8cbbd;
   --max-width: 46rem;
 }
 
@@ -67,6 +67,12 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
 h1 {
   font-size: 2.25rem;
   line-height: 1.2;
@@ -94,4 +100,100 @@ video {
   top: 1rem;
   padding: 0.5rem 0.75rem;
   background: var(--background);
+}
+
+/* About Us: warm, editorial profile cards for the six team members. */
+.about-page {
+  max-width: 76rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.about-intro {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-eyebrow {
+  margin: 0 0 0.5rem;
+  color: #714a32;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-page h1 {
+  margin: 0 0 1rem;
+  color: #38271e;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.about-intro p:last-child {
+  max-width: 42rem;
+  margin-bottom: 0;
+  color: #51463e;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.member-card {
+  min-height: 15rem;
+  padding: 1.5rem;
+  border: 1px solid #d8cbbd;
+  border-radius: 0.75rem;
+  background: #fffdf9;
+  box-shadow: 0 0.4rem 1.2rem rgb(56 39 30 / 7%);
+}
+
+.member-number {
+  display: inline-grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #714a32;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.member-card h2 {
+  margin: 1rem 0 0.5rem;
+  color: #38271e;
+  font-size: 1.5rem;
+}
+
+.member-card p {
+  margin: 0;
+  color: #51463e;
+  font-size: 1rem;
+}
+
+.member-prompt {
+  display: block;
+  margin-top: 1rem;
+  color: #714a32;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 52rem) {
+  .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 34rem) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page {
+    padding-top: 2rem;
+  }
 }
